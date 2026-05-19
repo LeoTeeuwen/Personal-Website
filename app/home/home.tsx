@@ -2,16 +2,15 @@
 
 import { useScroll, MotionConfig, LazyMotion, domAnimation, m } from "framer-motion";
 import Link from "next/link";
+import Hero from "./hero";
 
 export default function Home() {
     const { scrollYProgress } = useScroll();
 
     return (
     <>
-      <head>
-        <title>Home | Leo Teeuwen</title>
-        <link rel="icon" type="image/svg" href="/next.svg"/>
-      </head>
+      <title>Home | Leo Teeuwen</title>
+      <link rel="icon" type="image/svg" href="/next.svg"/>
       
       <div style={{display: "flex", flexDirection: "column"}}>
         <p>Yo Waddup Chain</p>
@@ -34,6 +33,7 @@ export default function Home() {
               >        
                   Who am I?
               </m.h1>
+              <Hero/>
           </LazyMotion>
       </MotionConfig>
     </>
