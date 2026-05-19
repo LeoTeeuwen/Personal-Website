@@ -10,7 +10,7 @@ export default function Home() {
     return (
     <>
       <title>Home | Leo Teeuwen</title>
-      <link rel="icon" type="image/svg" href="/next.svg"/>
+      <link rel="icon" type="image/png" href="/icon.png"/>
       
       <div style={{display: "flex", flexDirection: "column"}}>
         <p>Yo Waddup Chain</p>
