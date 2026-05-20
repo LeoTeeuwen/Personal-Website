@@ -5,6 +5,7 @@ export default function Secret() {
             <link rel="icon" type="image/png" href="/secretIcon.png"/>
             
             <p>Insert something cool!</p>
+            <p>Yo Waddup Chain</p>
         </div>
     )
 }

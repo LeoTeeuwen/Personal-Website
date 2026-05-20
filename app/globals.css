@@ -34,5 +34,6 @@ body {
 
 .hero-image {
   background-image: url("/tempBackground.png");
+  /* background-image: url("/joke_background.jpg"); */
   background-size: cover;
 }
