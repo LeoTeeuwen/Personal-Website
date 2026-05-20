@@ -23,15 +23,10 @@ export default function Home() {
                 initial={{opacity: 0, x: '-10vh'}}
                 whileInView={{opacity: 1, x: 0, transition: {duration: 1}}}
                 viewport={{once: true, amount: 'some', margin: '5%'}}
-                id={'aboutMe'} className='section-title'
+                id={'aboutMe'} className='dark:text-main text-d-main text-4xl border-b-4 font-medium border-third dark:border-d-third p-1 ml-[5%] mt-[5vh] sm:mt-[10vh] mb-[5vh] self-baseline w-fit;'
             >        
                 Who am I?
             </m.h1>
-
-            <div style={{display: "flex", flexDirection: "column"}}>
-              <Link href="/resume">Resume</Link>
-              <Link href="/hiddenTab">Link to what is going to be cool little side thing!</Link>
-            </div>
           </LazyMotion>
       </MotionConfig>
     </>
