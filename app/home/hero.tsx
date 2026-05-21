@@ -3,6 +3,8 @@
 import Link from "next/link";
 import { m } from 'framer-motion';
 import { GithubIcon, GmailIcon, LinkedInIcon } from "../components/icons";
+import Image from "next/image";
+import { useEffect, useState } from "react";
 
 function Socials() {
   return (
@@ -37,21 +39,21 @@ function Socials() {
 }
 
 export default function Hero() {
-    
-    
+
   return (
     <>
-    <div className="hero-image relative" style={{height: "100vh", display: "flex"}}>
-        <m.div        
-            initial={{opacity: 0, y: '25%'}}
-            animate={{opacity: 1, y: '0', transition:{ duration: 1 }}}
-            viewport={{once: true, amount: 'some', margin: '5%'}}
-            className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-fit h-fit bg-black p-4 rounded-md border-b-4"
-        >
-            <h1 className="text-d-main dark:text-main text-xl md:text-2xl lg:text-4xl font-bold text-center whitespace-nowrap">Hello, I am Leo Teeuwen</h1>
-            <Socials/>
-        </m.div>
-    </div>
+        <Image src="/tempBackground.png" fill alt="Loading..." className="aspect-16:9 w-full"/>
+        <div className="background-size: cover relative" style={{height: "100vh", display: "flex"}}>
+            <m.div        
+                initial={{opacity: 0, y: '25%'}}
+                animate={{opacity: 1, y: '0', transition:{ duration: 1 }}}
+                viewport={{once: true, amount: 'some', margin: '5%'}}
+                className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-fit h-fit bg-black p-4 rounded-md border-b-4"
+            >
+                <h1 className="text-d-main dark:text-main text-xl md:text-2xl lg:text-4xl font-bold text-center whitespace-nowrap">Hello, I am Leo Teeuwen</h1>
+                <Socials/>
+            </m.div>
+        </div>
     </>
   );
 }
