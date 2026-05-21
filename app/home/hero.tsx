@@ -4,7 +4,6 @@ import Link from "next/link";
 import { m } from 'framer-motion';
 import { GithubIcon, GmailIcon, LinkedInIcon } from "../components/icons";
 import Image from "next/image";
-import { useEffect, useState } from "react";
 
 function Socials() {
   return (
