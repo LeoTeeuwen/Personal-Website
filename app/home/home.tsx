@@ -4,6 +4,7 @@ import { useScroll, MotionConfig, LazyMotion, domAnimation, m } from "framer-mot
 import Link from "next/link";
 import WhoAmI from "./whoAmI";
 import Hero from "./hero";
+import Repos from "./repos";
 
 export default function Home() {
     const { scrollYProgress } = useScroll();
@@ -21,6 +22,7 @@ export default function Home() {
                 style={{scaleX: scrollYProgress}}
             />
             <WhoAmI/>
+            <Repos/>
           </LazyMotion>
       </MotionConfig>
     </>
