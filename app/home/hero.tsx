@@ -42,7 +42,7 @@ export default function Hero() {
 
   return (
     <>
-        <Image src="/tempBackground.png" fill alt="Loading..." className="aspect-16:9 w-full"/>
+        <Image src="/tempBackground.png" fill loading="eager" alt="Loading..." objectPosition="absolute" className="aspect-16:9 w-full"/>
         <div className="background-size: cover relative" style={{height: "100vh", display: "flex"}}>
             <m.div        
                 initial={{opacity: 0, y: '25%'}}
