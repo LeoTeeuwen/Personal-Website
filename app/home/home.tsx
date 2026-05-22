@@ -5,6 +5,7 @@ import WhoAmI from "./whoAmI";
 import Hero from "./hero";
 import Repos from "./repos";
 import WorkExperience from "./workExperience";
+import Skills from "./skills";
 
 export default function Home() {
     const { scrollYProgress } = useScroll();
@@ -23,6 +24,7 @@ export default function Home() {
             />
             <WhoAmI/>
             <WorkExperience/>
+            <Skills/>
             <Repos/>
           </LazyMotion>
       </MotionConfig>
