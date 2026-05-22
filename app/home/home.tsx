@@ -1,10 +1,10 @@
 'use client';
 
 import { useScroll, MotionConfig, LazyMotion, domAnimation, m } from "framer-motion";
-import Link from "next/link";
 import WhoAmI from "./whoAmI";
 import Hero from "./hero";
 import Repos from "./repos";
+import WorkExperience from "./workExperience";
 
 export default function Home() {
     const { scrollYProgress } = useScroll();
@@ -22,6 +22,7 @@ export default function Home() {
                 style={{scaleX: scrollYProgress}}
             />
             <WhoAmI/>
+            <WorkExperience/>
             <Repos/>
           </LazyMotion>
       </MotionConfig>
