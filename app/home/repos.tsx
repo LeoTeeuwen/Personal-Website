@@ -44,6 +44,15 @@ const otherProjects: Projects[] = [
         // TODO maybe make a page for showing this tool off?
         github: 'https://github.com/LeoTeeuwen/page-element-modifier',
     },
+    {
+        name: "Time Tracker Visualizer",
+        description: "A mix of softwares to track user data to push to a database, allowing reconstruction of screentime of that day.",
+        date: "June 2026 - July 2026",
+        tags: ["Javascript", "Kotlin", "Chrome Extension", "Electron"],
+        page: undefined,
+        // TODO maybe make a page for showing this tool off?
+        github: 'https://github.com/LeoTeeuwen/time-tracker-visualizer',
+    },
 ];
 
 
