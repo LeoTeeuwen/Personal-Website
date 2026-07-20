@@ -37,6 +37,11 @@ const skillsSection: skills[] = [
         image: "/react.svg",
         time: "2 years"
     },
+    {
+        title: "Electron",
+        image: "/electron.svg",
+        time: "1 year"
+    }
 ]
 
 export default function Skills() {

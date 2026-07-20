@@ -45,6 +45,7 @@ export default function Hero() {
             <Image src="/tempBackground.png" fill loading="eager" alt="Loading..." className="aspect-16:9"/>
         </div>
         <div className="background-size: cover relative" style={{height: "100vh", display: "flex"}}>
+            <a href="/hiddenTab" style={{opacity: 0.0}}>Hidden Tab!</a>
             <m.div        
                 initial={{opacity: 0, y: '25%'}}
                 animate={{opacity: 1, y: '0', transition:{ duration: 1 }}}
