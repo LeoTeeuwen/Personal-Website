@@ -40,8 +40,7 @@ const otherProjects: Projects[] = [
         description: "A chrome extension that allows the user to manually remove elements on a page by a simple key bind. Also known as \"Manual AdBlocker\".",
         date: "January 2026",
         tags: ["Javascript", "JQuery", "Chrome Extension"],
-        page: undefined,
-        // TODO maybe make a page for showing this tool off?
+        page: "/demos/pageElementModifier",
         github: 'https://github.com/LeoTeeuwen/page-element-modifier',
     },
     {
@@ -76,22 +75,22 @@ export default function Repos() {
                     whileInView={{opacity: 1, y: '0', transition: {duration: 1, ease: 'easeOut'}}}
                     viewport={{once: true, amount: 'some', margin: '5%'}}
                     key={project.name}
-                    className='bg-a-main dark:bg-d-a-main p-8 rounded-xl shadow-lg min-h-full flex flex-col max-[400px]:w-[300px] w-[400px] p-4 rounded-md border-b-4'
+                    className='bg-a-main dark:bg-[#2e2e2e] p-8 rounded-xl shadow-lg min-h-full flex flex-col max-[400px]:w-[300px] w-[400px] p-4 rounded-md border-b-4'
                     >
-                    <p className='text-3xl font-semibold mb-2 bottom-border w-fit'>{project.name}</p>
-                    <p className='text-sm dark:text-d-second mb-3'>{project.date}</p>
-                    <p className='text-base'>{project.description}</p>
-                    <div className='flex flex-wrap gap-3 mt-4 mb-3'>
-                        {project.tags.length != 0 && project.tags.map(tag => {
-                        return (
-                            <p key={tag} className='text-sm text-a-main dark:text-d-main bg-second dark:bg-a-main font-semibold w-fit px-3 py-1 rounded-2xl'>{tag}</p>
-                        );
-                        })}
-                    </div>
-                    <div className="mt-auto flex flex-col sm:flex-row justify-between">
-                        {project.github && <Link href={project.github} className='' target='_blank'><p className='robot-learn-more'>View Code</p></Link>}
-                        {project.page && <Link href={project.page} className=''><p className='robot-learn-more'>Learn More</p></Link>}
-                    </div>
+                        <p className='text-3xl font-semibold mb-2 bottom-border w-fit'>{project.name}</p>
+                        <p className='text-sm dark:text-d-second mb-3'>{project.date}</p>
+                        <p className='text-base'>{project.description}</p>
+                        <div className='flex flex-wrap gap-3 mt-4 mb-3'>
+                            {project.tags.length != 0 && project.tags.map(tag => {
+                            return (
+                                <p key={tag} className='text-sm text-a-main dark:text-d-main bg-second dark:bg-black font-semibold w-fit px-3 py-1 rounded-2xl'>{tag}</p>
+                            );
+                            })}
+                        </div>
+                        <div className="mt-auto flex flex-col sm:flex-row justify-between">
+                            {project.github && <Link href={project.github} className='' target='_blank'><p className='text-sm text-a-main dark:text-d-main bg-second dark:bg-black font-semibold w-fit px-3 py-1 rounded-2xl'>View Code</p></Link>}
+                            {project.page && <Link href={project.page} className=''><p className='text-sm text-a-main dark:text-d-main bg-second dark:bg-black font-semibold w-fit px-3 py-1 rounded-2xl'>Demo it!</p></Link>}
+                        </div>
                     </m.div>
                 )
                 })}
