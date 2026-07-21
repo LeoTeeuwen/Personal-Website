@@ -15,7 +15,6 @@ export default function PageElementModifier() {
             if (e.key === 'y' && e.type === "keydown") {
                 Y_KEY_DOWN = true;
             } else if (e.key === 'y' && e.type === "keyup") {
-                console.log("running statement")
                 Y_KEY_DOWN = false;
             } else if (e.key === 'Control' && e.type === "keydown") {
                 CTRL_KEY_DOWN = true;
@@ -25,8 +24,12 @@ export default function PageElementModifier() {
         });
 
         const handleClick = ((e: PointerEvent) => {
+            e.stopImmediatePropagation();
+
             if (Y_KEY_DOWN && CTRL_KEY_DOWN) {
-                console.log("Remove Element!");
+                // TODO Change logic to ignore things with certain tags!
+                // @ts-expect-error
+                e.target.style.display = 'none';
             }
         })
 
