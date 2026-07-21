@@ -44,6 +44,7 @@ export default function PageElementModifier() {
     return(
         <div className="viewport-container">
             <div className="browser-window">
+                {/* TODO Make this NOT get removed by AD blockers! */}
                 <div className="fake-ad top-ad">
                 <h3>🔥 MEGA SALE! CLICK HERE! 🔥</h3>
                 <p>Don't miss out on this totally real offer!</p>
