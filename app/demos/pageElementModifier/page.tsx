@@ -74,7 +74,7 @@ export default function PageElementModifier() {
                     <input 
                         type="text" 
                         className="search-input" 
-                        placeholder="Search Google or type a URL" 
+                        placeholder="Search this (not) unique website!" 
                     />
                     <div className="mic-icon">🎤</div>
                 </div>
