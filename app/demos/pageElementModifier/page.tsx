@@ -41,7 +41,18 @@ export default function PageElementModifier() {
 
     
     return(
-        <div>
+        // <div className="display: flex; flex-direction: column;">
+        <div className='overflow-auto'>
+            {/* <div className="mx-auto w-fit mt-[2.5%] "> */}
+            <div className="mx-auto max-w text-left mt-[2.5%] ml-[20%]">
+                <h1 className='text-5xl font-bold'>The Issue</h1>
+                <p className='text-2x1 mt-[2.5%]'>
+                    On certain websites I noticed that ADs would cover important info! <br />
+                    Issue is my AD Blocker would not block these... <br/>
+                    So, I came up with a manual solution to this!
+                </p>
+            </div>
+
             <div className="viewport-container">
                 <div className="browser-window">
                     {/* TODO Make this NOT get removed by AD blockers! */}
