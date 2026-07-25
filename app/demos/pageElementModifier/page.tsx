@@ -39,18 +39,33 @@ export default function PageElementModifier() {
         window.addEventListener('keyup', handleKeystrokes)
     }, [])
 
+    const refreshDemo = () => {
+        window.location.reload();
+    }
+
     
     return(
-        // <div className="display: flex; flex-direction: column;">
-        <div className='overflow-auto'>
+        <div style={{overflow: "overlay", overflowY: 'auto', overflowX: "hidden"}}>
             {/* <div className="mx-auto w-fit mt-[2.5%] "> */}
-            <div className="mx-auto max-w text-left mt-[2.5%] ml-[20%]">
+            <div className="mx-auto max-w text-left mt-[5%] ml-[20%] mb-[4%]">
                 <h1 className='text-5xl font-bold'>The Issue</h1>
                 <p className='text-2x1 mt-[2.5%]'>
                     On certain websites I noticed that ADs would cover important info! <br />
                     Issue is my AD Blocker would not block these... <br/>
                     So, I came up with a manual solution to this!
                 </p>
+            </div>
+            
+            <div className="mx-auto max-w text-left mt-[2.5%] ml-[20%]">
+                <h1 className='text-5xl font-bold'>Try it!</h1>
+                <p className='text-2x1 mt-[2.5%]'>
+                    Use the demo below! Use Ctrl + Y to remove the ads! <br/>
+                    You can also remove any other element should you like too!
+                </p>
+            </div>
+
+            <div className='px-4 bg-[#FFFFFF] rounded-xl flex mx-auto min-h-15 max-w-[15%] items-center justify-center mt-[5%]'>
+                <button onClick={refreshDemo} className='text-black'>Refresh the demo!</button>
             </div>
 
             <div className="viewport-container">
@@ -94,110 +109,109 @@ export default function PageElementModifier() {
                 {/* All styling kept at the bottom of the file */}
                 <style jsx>{`
                     :global(body) {
-                    margin: 0;
-                    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-                    background-color: #111; /* Dark backdrop for the whole screen */
-                    color: white;
-                    overflow: hidden;
+                        margin: 0;
+                        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+                        background-color: #111; /* Dark backdrop for the whole screen */
+                        color: white;
                     }
 
                     /* --- OUTER VIEWPORT --- */
                     .viewport-container {
-                    min-height: 100vh;
-                    width: 100vw;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
+                        min-height: 70vh;
+                        width: 100vw;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
                     }
 
                     /* --- 60% BLACK BROWSER WINDOW --- */
                     .browser-window {
-                    position: relative;
-                    width: 60vw;
-                    height: 60vh;
-                    background-color: black; /* Requested black background */
-                    border: 1px solid #333;
-                    border-radius: 12px;
-                    box-shadow: 0 20px 50px rgba(0,0,0,0.8);
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                    justify-content: center;
-                    overflow: hidden; /* Keeps ads from spilling out */
+                        position: relative;
+                        width: 60vw;
+                        height: 60vh;
+                        background-color: black; /* Requested black background */
+                        border: 1px solid #333;
+                        border-radius: 12px;
+                        box-shadow: 0 20px 50px rgba(0,0,0,0.8);
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        overflow: hidden; /* Keeps ads from spilling out */
                     }
 
                     /* --- FAKE ADS STYLING --- */
                     .fake-ad {
-                    position: absolute; /* Relative to the .browser-window */
-                    background: #ffff00;
-                    color: red;
-                    border: 3px dashed red;
-                    z-index: 9999;
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                    justify-content: center;
-                    text-align: center;
-                    animation: flash 1s infinite alternate;
-                    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
-                    padding: 10px;
-                    box-sizing: border-box;
+                        position: absolute; /* Relative to the .browser-window */
+                        background: #ffff00;
+                        color: red;
+                        border: 3px dashed red;
+                        z-index: 9999;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        text-align: center;
+                        animation: flash 1s infinite alternate;
+                        box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+                        padding: 10px;
+                        box-sizing: border-box;
                     }
 
                     .fake-ad h3, .fake-ad h4, .fake-ad p {
-                    margin: 0;
-                    padding: 2px;
+                        margin: 0;
+                        padding: 2px;
                     }
 
                     .fake-ad p {
-                    font-size: 0.75rem;
-                    color: black;
-                    font-weight: bold;
+                        font-size: 0.75rem;
+                        color: black;
+                        font-weight: bold;
                     }
 
                     /* Ad sizing percentages based on the 60% window */
                     .top-ad {
-                    top: 0;
-                    left: 0;
-                    width: 100%;
-                    height: 20%;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 20%;
                     }
 
                     .left-ad {
-                    top: 20%;
-                    left: 0;
-                    width: 25%;
-                    height: 80%;
+                        top: 20%;
+                        left: 0;
+                        width: 25%;
+                        height: 80%;
                     }
 
                     .right-ad {
-                    top: 20%;
-                    right: 0;
-                    width: 25%;
-                    height: 80%;
+                        top: 20%;
+                        right: 0;
+                        width: 25%;
+                        height: 80%;
                     }
 
                     @keyframes flash {
-                    0% { background-color: #ffff00; }
-                    100% { background-color: #ff9900; }
+                        0% { background-color: #ffff00; }
+                        100% { background-color: #ff9900; }
                     }
 
                     /* --- CHROME MAIN UI STYLING (Scaled down) --- */
                     .main-content {
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                    width: 45%; /* Squeezed between the left and right ads */
-                    max-width: 400px;
-                    margin-top: 5%; /* Pushed down slightly from the top ad */
-                    z-index: 1; /* Keep underneath ads if they overlap */
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        width: 45%; /* Squeezed between the left and right ads */
+                        max-width: 400px;
+                        margin-top: 5%; /* Pushed down slightly from the top ad */
+                        z-index: 1; /* Keep underneath ads if they overlap */
                     }
 
                     .logo-container {
-                    font-size: 3.5rem; /* Scaled down */
-                    font-weight: 500;
-                    letter-spacing: -2px;
-                    margin-bottom: 20px;
+                        font-size: 3.5rem; /* Scaled down */
+                        font-weight: 500;
+                        letter-spacing: -2px;
+                        margin-bottom: 20px;
                     }
 
                     .blue { color: #4285f4; }
@@ -206,31 +220,31 @@ export default function PageElementModifier() {
                     .green { color: #34a853; }
 
                     .search-container {
-                    display: flex;
-                    align-items: center;
-                    width: 100%;
-                    background-color: #303134;
-                    border: 1px solid #5f6368;
-                    border-radius: 24px;
-                    padding: 0 14px;
-                    height: 40px; /* Scaled down */
-                    margin-bottom: 30px;
+                        display: flex;
+                        align-items: center;
+                        width: 100%;
+                        background-color: #303134;
+                        border: 1px solid #5f6368;
+                        border-radius: 24px;
+                        padding: 0 14px;
+                        height: 40px; /* Scaled down */
+                        margin-bottom: 30px;
                     }
 
                     .search-icon, .mic-icon {
-                    font-size: 1rem;
-                    opacity: 0.7;
+                        font-size: 1rem;
+                        opacity: 0.7;
                     }
 
                     .search-input {
-                    flex: 1;
-                    background: transparent;
-                    border: none;
-                    color: white;
-                    font-size: 0.9rem;
-                    padding: 0 10px;
-                    outline: none;
-                    min-width: 0; /* Prevents overflow */
+                        flex: 1;
+                        background: transparent;
+                        border: none;
+                        color: white;
+                        font-size: 0.9rem;
+                        padding: 0 10px;
+                        outline: none;
+                        min-width: 0; /* Prevents overflow */
                     }
 
                     .shortcuts-grid {
