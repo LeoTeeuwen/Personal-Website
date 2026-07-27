@@ -99,7 +99,7 @@ export default function PageElementModifier() {
                         <div className="shortcuts-grid" data-type="remove">
                             {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((item) => (
                             <div key={item} className="shortcut-item" data-type="remove">
-                                <img className="shortcut-images" src={"/loadingScreen.png"} alt="Logo" data-type="remove"/>
+                                <img className="shortcut-images" src={`/example_images/${item}.jpg`} alt="Logo" data-type="remove"/>
                             </div>
                             ))}
                         </div>
@@ -255,30 +255,31 @@ export default function PageElementModifier() {
                     }
 
                     .shortcut-images {
-                        width: 125%
-                        height: 125%
+                        max-height: 125px;
+                        max-weight: 125px;
+                        overflow: hidden;
                     }
 
                     .shortcut-item {
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                    padding: 10px 5px;
-                    border-radius: 4px;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        padding: 10px 5px;
+                        border-radius: 4px;
                     }
 
                     .shortcut-icon {
-                    width: 36px; /* Scaled down */
-                    height: 36px;
-                    background-color: #303134;
-                    border-radius: 50%;
-                    margin-bottom: 10px;
+                        width: 36px; /* Scaled down */
+                        height: 36px;
+                        background-color: #303134;
+                        border-radius: 50%;
+                        margin-bottom: 10px;
                     }
 
                     .shortcut-label {
-                    font-size: 0.7rem;
-                    color: #e8eaed;
-                    white-space: nowrap;
+                        font-size: 0.7rem;
+                        color: #e8eaed;
+                        white-space: nowrap;
                     }
                 `}</style>
             </div>
