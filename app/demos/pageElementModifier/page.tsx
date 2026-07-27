@@ -2,9 +2,6 @@
 
 import { useEffect } from 'react';
 
-
-
-
 export default function PageElementModifier() {
     let CTRL_KEY_DOWN = false;
     let Y_KEY_DOWN = false;
@@ -59,7 +56,7 @@ export default function PageElementModifier() {
             <div className="mx-auto max-w text-left mt-[2.5%] ml-[20%]">
                 <h1 className='text-5xl font-bold'>Try it!</h1>
                 <p className='text-2x1 mt-[2.5%]'>
-                    Use the demo below! Use Ctrl + Y to remove the ads! <br/>
+                    Use the demo below! Use Ctrl + Y and Click to remove the ads to see all 10 animal images! <br/>
                     You can also remove any other element should you like too!
                 </p>
             </div>
@@ -251,16 +248,18 @@ export default function PageElementModifier() {
                         display: grid;
                         grid-template-columns: repeat(5, 1fr);
                         gap: 10px;
-                        width: 150%;
+                        width: 190%;
                     }
 
                     .shortcut-images {
-                        max-height: 125px;
-                        max-weight: 125px;
+                        min-height: 125px;
+                        min-width: 125px;
                         overflow: hidden;
                     }
 
                     .shortcut-item {
+                        // border-style: solid;
+                        // border-color: red;
                         display: flex;
                         flex-direction: column;
                         align-items: center;
