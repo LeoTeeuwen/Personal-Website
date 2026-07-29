@@ -68,15 +68,15 @@ export default function PageElementModifier() {
             <div className="viewport-container">
                 <div className="browser-window">
                     {/* TODO Make this NOT get removed by AD blockers! */}
-                    <div className="fake-ad top-ad" data-type="remove">
+                    <div className="hehe hehe1" data-type="remove">
                         <h3 data-type="remove">🔥 MEGA SALE! CLICK HERE! 🔥</h3>
                         <p data-type="remove">Don't miss out on this totally real offer!</p>
                     </div>
-                        <div className="fake-ad left-ad" data-type="remove">
+                        <div className="hehe hehe3" data-type="remove">
                         <h4 data-type="remove">BUY<br/>NOW</h4>
                         <p data-type="remove">50% OFF</p>
                     </div>
-                        <div className="fake-ad right-ad" data-type="remove">
+                        <div className="hehe hehe2" data-type="remove">
                         <h4 data-type="remove">LOSE<br data-type="remove"/>WEIGHT<br data-type="remove"/>FAST!</h4>
                         <p data-type="remove">Doctors hate this!</p>
                     </div>
@@ -137,8 +137,7 @@ export default function PageElementModifier() {
                         overflow: hidden; /* Keeps ads from spilling out */
                     }
 
-                    /* --- FAKE ADS STYLING --- */
-                    .fake-ad {
+                    .hehe {
                         position: absolute; /* Relative to the .browser-window */
                         background: #ffff00;
                         color: red;
@@ -155,33 +154,32 @@ export default function PageElementModifier() {
                         box-sizing: border-box;
                     }
 
-                    .fake-ad h3, .fake-ad h4, .fake-ad p {
+                    .hehe h3, .hehe h4, .hehe p {
                         margin: 0;
                         padding: 2px;
                     }
 
-                    .fake-ad p {
+                    .hehe p {
                         font-size: 0.75rem;
                         color: black;
                         font-weight: bold;
                     }
 
-                    /* Ad sizing percentages based on the 60% window */
-                    .top-ad {
+                    .hehe1 {
                         top: 0;
                         left: 0;
                         width: 100%;
                         height: 20%;
                     }
 
-                    .left-ad {
+                    .hehe3 {
                         top: 20%;
                         left: 0;
                         width: 25%;
                         height: 80%;
                     }
 
-                    .right-ad {
+                    .hehe2 {
                         top: 20%;
                         right: 0;
                         width: 25%;
@@ -193,7 +191,6 @@ export default function PageElementModifier() {
                         100% { background-color: #ff9900; }
                     }
 
-                    /* --- CHROME MAIN UI STYLING (Scaled down) --- */
                     .main-content {
                         display: flex;
                         flex-direction: column;
