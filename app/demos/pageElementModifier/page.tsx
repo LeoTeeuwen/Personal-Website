@@ -62,7 +62,7 @@ export default function PageElementModifier() {
             </div>
 
             <div className='px-4 bg-[#FFFFFF] rounded-xl flex mx-auto min-h-15 max-w-[15%] items-center justify-center mt-[5%]'>
-                <button onClick={refreshDemo} className='text-black'>Refresh the demo!</button>
+                <button onClick={refreshDemo} className='text-black font-bold'>Refresh the demo!</button>
             </div>
 
             <div className="viewport-container">
