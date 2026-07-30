@@ -10,21 +10,21 @@ function Socials() {
     <div className="flex flex-row justify-around mt-3 gap-x-4 text-main">
       <Link href={"https://github.com/LeoTeeuwen"} className='' target='_blank'>
         <button type="button"
-          className="mb-2 flex rounded bg-[#333] px-6 py-2.5 text-xs font-medium uppercase leading-normal text-white shadow-md transition duration-150 ease-in-out hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg">
+          className="cursor-pointer mb-2 flex rounded bg-[#333333] px-6 py-2.5 text-xs font-medium uppercase leading-normal text-white shadow-md transition duration-150 ease-in-out hover:bg-[#444444] focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg">
           <GithubIcon/>
           GitHub
         </button>
       </Link>
       <Link href={"https://www.linkedin.com/in/leo-teeuwen-560a3b2a9"} className='' target='_blank'>
         <button type="button"
-          className="mb-2 flex rounded bg-[#0077b5] px-6 py-2.5 text-xs font-medium uppercase leading-normal text-white shadow-md transition duration-150 ease-in-out hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg">
+          className="cursor-pointer mb-2 flex rounded bg-[#0077b5] px-6 py-2.5 text-xs font-medium uppercase leading-normal text-white shadow-md transition duration-150 ease-in-out hover:bg-[#4a77b2] focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg">
           <LinkedInIcon/>
           Linkedin
         </button>
       </Link>
       <Link href="/resume" className='' target='_blank'>
         <button type="button"
-          className="mb-2 flex rounded bg-[#ea4335] px-6 py-2.5 text-xs font-medium uppercase leading-normal text-white shadow-md transition duration-150 ease-in-out hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg">
+          className="cursor-pointer mb-2 flex rounded bg-[#ea4335] px-6 py-2.5 text-xs font-medium uppercase leading-normal text-white shadow-md transition duration-150 ease-in-out hover:bg-[#c6503e] focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg">
           <span className="me-2 [&>svg]:h-4 [&>svg]:w-4">
             <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 384 512">
                 <path d="M0 64C0 28.7 28.7 0 64 0H224V128c0 17.7 14.3 32 32 32H384V448c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V64zm384 64H256V0L384 128z" />
