@@ -52,7 +52,7 @@ export default function Hero() {
                 viewport={{once: true, amount: 'some', margin: '5%'}}
                 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-fit h-fit bg-black p-4 rounded-md border-b-4"
             >
-                <h1 className="text-d-main dark:text-main text-xl md:text-2xl lg:text-4xl font-bold text-center whitespace-nowrap">Hello, I am Leo Teeuwen</h1>
+                <h1 className="text-d-main main-font dark:text-main text-xl md:text-2xl lg:text-4xl font-bold text-center whitespace-nowrap">Hello, I am Leo Teeuwen</h1>
                 <Socials/>
             </m.div>
         </div>

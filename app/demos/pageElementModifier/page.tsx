@@ -45,8 +45,8 @@ export default function PageElementModifier() {
         <div style={{overflow: "overlay", overflowY: 'auto', overflowX: "hidden"}}>
             {/* <div className="mx-auto w-fit mt-[2.5%] "> */}
             <div className="mx-auto max-w text-left mt-[5%] ml-[20%] mb-[4%]">
-                <h1 className='text-5xl font-bold'>The Issue</h1>
-                <p className='text-2x1 mt-[2.5%]'>
+                <h1 className='main-font text-5xl font-bold'>The Issue</h1>
+                <p className='main-font text-2xl mt-[2.5%]'>
                     On certain websites I noticed that ADs would cover important info! <br />
                     Issue is my AD Blocker would not block these... <br/>
                     So, I came up with a manual solution to this!
@@ -54,15 +54,15 @@ export default function PageElementModifier() {
             </div>
             
             <div className="mx-auto max-w text-left mt-[2.5%] ml-[20%]">
-                <h1 className='text-5xl font-bold'>Try it!</h1>
-                <p className='text-2x1 mt-[2.5%]'>
+                <h1 className='main-font text-5xl font-bold'>Try it!</h1>
+                <p className='main-font text-2xl mt-[2.5%]'>
                     Use the demo below! Use Ctrl + Y and Click to remove the ads to see all 10 animal images! <br/>
                     You can also remove any other element should you like too!
                 </p>
             </div>
 
             <div className='px-4 bg-[#FFFFFF] rounded-xl flex mx-auto min-h-15 max-w-[15%] items-center justify-center mt-[5%]'>
-                <button onClick={refreshDemo} className='text-black font-bold'>Refresh the demo!</button>
+                <button onClick={refreshDemo} className='text-black font-bold main-font text-[15px]'>Refresh the demo!</button>
             </div>
 
             <div className="viewport-container">

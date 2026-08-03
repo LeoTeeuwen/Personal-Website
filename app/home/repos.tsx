@@ -63,7 +63,7 @@ export default function Repos() {
                 initial={{opacity: 0, y: '5vh'}}
                 whileInView={{opacity: 1, y: 0, transition: {duration: 1}}}
                 viewport={{once: true, amount: 'some', margin: '10%'}}
-                id={'aboutMe'} className='dark:text-main text-d-main self-center text-4xl border-b-4 font-medium border-third dark:border-d-third p-1 ml-[5%] mt-[5vh] sm:mt-[10vh] mb-[5vh] self-baseline w-fit;'
+                id={'aboutMe'} className='main-font dark:text-main text-d-main self-center text-4xl border-b-4 font-medium border-third dark:border-d-third p-1 ml-[5%] mt-[5vh] sm:mt-[10vh] mb-[5vh] self-baseline w-fit;'
             >        
                 My Projects
             </m.h1>
@@ -77,9 +77,9 @@ export default function Repos() {
                     key={project.name}
                     className='bg-a-main dark:bg-[#2e2e2e] p-8 rounded-xl shadow-lg min-h-full flex flex-col max-[400px]:w-[300px] w-[400px] p-4 rounded-md border-b-4'
                     >
-                        <p className='text-3xl font-semibold mb-2 bottom-border w-fit'>{project.name}</p>
-                        <p className='text-sm dark:text-d-second mb-3'>{project.date}</p>
-                        <p className='text-base'>{project.description}</p>
+                        <p className='main-font text-3xl font-semibold mb-2 bottom-border w-fit'>{project.name}</p>
+                        <p className='main-font text-sm dark:text-d-second mb-3'>{project.date}</p>
+                        <p className='main-font text-base'>{project.description}</p>
                         <div className='flex flex-wrap gap-3 mt-4 mb-3'>
                             {project.tags.length != 0 && project.tags.map(tag => {
                             return (

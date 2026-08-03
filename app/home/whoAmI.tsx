@@ -10,7 +10,7 @@ export default function WhoAmI() {
                 initial={{opacity: 0, y: '5vh'}}
                 whileInView={{opacity: 1, y: 0, transition: {duration: 1}}}
                 viewport={{once: true, amount: 'some', margin: '10%'}}
-                id={'aboutMe'} className='dark:text-main text-d-main self-center text-4xl border-b-4 font-medium border-third dark:border-d-third p-1 ml-[5%] mt-[5vh] sm:mt-[10vh] mb-[5vh] self-baseline w-fit;'
+                id={'aboutMe'} className='dark:text-main main-font text-d-main self-center text-4xl border-b-4 font-medium border-third dark:border-d-third p-1 ml-[5%] mt-[5vh] sm:mt-[10vh] mb-[5vh] self-baseline w-fit;'
             >        
                 Who am I?
             </m.h1>
@@ -21,7 +21,7 @@ export default function WhoAmI() {
                         whileInView={{opacity: 1, x: 0, transition: {duration: 1}}}
                         viewport={{once: true, amount: 'some'}}            
                     >
-                        <p className='text-d-main font-medium text-sm md:text-2xl md:w-2/3 whitespace-pre-line md:mx-4'>
+                        <p className='main-font text-d-main font-medium text-sm md:text-2xl md:w-2/3 whitespace-pre-line md:mx-4'>
                         {`I am studying Computer Science at the University of Arkansas!
 
                         I have lots of experience with Mobile Development, Web Dev, and Dev Ops.
