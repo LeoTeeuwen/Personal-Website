@@ -5,15 +5,20 @@ import Image from "next/image";
 
 export default function WhoAmI() {
     return (
-        <>
-            <m.h1                    
-                initial={{opacity: 0, y: '5vh'}}
-                whileInView={{opacity: 1, y: 0, transition: {duration: 1}}}
-                viewport={{once: true, amount: 'some', margin: '10%'}}
-                id={'aboutMe'} className='dark:text-main main-font text-d-main self-center text-4xl border-b-4 font-medium border-third dark:border-d-third p-1 ml-[5%] mt-[5vh] sm:mt-[10vh] mb-[5vh] self-baseline w-fit;'
-            >        
-                Who am I?
-            </m.h1>
+        <div className='relative pb-[5%]'>
+            <div className="w-full h-full absolute z-[-100]">
+                <Image src="/tempBackground.png" fill loading="eager" alt="Loading..." className="aspect-16:9"/>
+            </div>
+            <div className='px-4 rounded-xl flex mx-auto min-h-15 max-w-[15%] items-center justify-center mt-[2.5%]'>
+                <m.h1                    
+                    initial={{opacity: 0, y: '5vh'}}
+                    whileInView={{opacity: 1, y: 0, transition: {duration: 1}}}
+                    viewport={{once: true, amount: 'some', margin: '10%'}}
+                    id={'aboutMe'} className='dark:text-main mx-auto main-font text-d-main self-center text-4xl border-b-4 font-medium border-third dark:border-d-third p-1 ml-[5%] mt-[5vh] sm:mt-[10vh] mb-[5vh] self-baseline w-fit;'
+                >        
+                    Who am I?
+                </m.h1>
+            </div>
             <div className='flex items-center flex-col'>
                 <div className='max-w-[1500px] mx-[5%] bg-about-me-background dark:bg-d-about-me-background flex flex-col md:flex-row items-center rounded-2xl p-4 shadow-xl'>
                     <m.div
@@ -38,6 +43,6 @@ export default function WhoAmI() {
                     </m.div>
                 </div>
             </div>
-        </>
+        </div>
     )
 }

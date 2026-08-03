@@ -46,3 +46,7 @@ body {
 .main-font {
   font-family: monospace;
 }
+
+.test-bg-image {
+  background-image: url("/tempBackground.png");
+}
