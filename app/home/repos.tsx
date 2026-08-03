@@ -61,7 +61,7 @@ export default function Repos() {
     return (
         <div className='relative pb-[5%]'>
             <div className="w-full h-full absolute z-[-100]">
-                <Image src="/tempBackground.png" fill loading="eager" alt="Loading..." className="aspect-16:9"/>
+                <Image src="/background_7.webp" fill loading="eager" alt="Loading..." className="aspect-16:9 blur-lg"/>
             </div>
             <div className='px-4 rounded-xl flex mx-auto min-h-15 w-[25%] items-center justify-center mt-[2.5%]'>
                 <m.h1                    

@@ -5,7 +5,7 @@ export default function WorkExperience() {
     return (
         <div className='relative pb-[5%]'>
             <div className="w-full h-full absolute z-[-100]">
-                <Image src="/tempBackground.png" fill loading="eager" alt="Loading..." className="aspect-16:9"/>
+                <Image src="/background_4.webp" fill loading="eager" alt="Loading..." className="aspect-16:9 blur-lg"/>
             </div>
             <div className='px-4 rounded-xl flex mx-auto min-h-15 w-[25%] items-center justify-center mt-[2.5%]'>
                 <m.h1                    
@@ -19,12 +19,12 @@ export default function WorkExperience() {
             </div>
             <div className="flex w-full items-center gap-6 p-1">
                 <m.div 
-                    className="w-1/2 ml-50" 
+                    className="w-1/2 ml-50 bg-[#2e2e2e] rounded-2xl"
                     initial={{opacity: 0, x: '-10vh'}}
                     whileInView={{opacity: 1, x: 0, transition:{duration: 1}}}
                     viewport={{once:true, amount: "some"}}
                 >
-                    <p className="main-font text-lg font-medium whitespace-pre-line md:mx-4">{`
+                    <p className="main-font text-[120%] font-medium whitespace-pre-line md:mx-4 pb-[5%]">{`
                         ● Managed a team of 12+ interns, overseeing work, code, ensuring apt progress for our projects. Team produced 6+ key widgets for our Generalized Smart City mobile app.
 
                         ● Gained lots of skills in reading other’s code, teaching, training, assigning tasks, working with other managers, delegation of management, and communication skills.
@@ -36,7 +36,7 @@ export default function WorkExperience() {
                 </m.div>
 
                 <m.div 
-                    className="w-1/2 mr-75" 
+                    className="w-1/2 mr-75 min-w-[25%]" 
                     initial={{opacity: 0, x: '10vh'}}
                     whileInView={{opacity: 1, x: 0, transition:{duration: 1}}}
                     viewport={{once:true, amount: "some"}}

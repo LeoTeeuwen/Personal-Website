@@ -49,14 +49,14 @@ export default function Skills() {
     return (
         <div className='relative pb-[5%]'>
             <div className="w-full h-full absolute z-[-100]">
-                <Image src="/tempBackground.png" fill loading="eager" alt="Loading..." className="aspect-16:9"/>
+                <Image src="/background_6.webp" fill loading="eager" alt="Loading..." className="aspect-16:9 blur-lg"/>
             </div>
             <div className='px-4 rounded-xl flex mx-auto min-h-15 w-[25%] items-center justify-center mt-[2.5%]'>
                 <m.h1                    
                     initial={{opacity: 0, y: '7vh'}}
                     whileInView={{opacity: 1, y: 0, transition: {duration: 1}}}
                     viewport={{once: true, amount: 'some', margin: '10%'}}
-                    id={'aboutMe'} className='dark:text-main main-font text-d-main self-center text-4xl border-b-4 font-medium border-third dark:border-d-third p-1 ml-[5%] mt-[5vh] sm:mt-[10vh] mb-[5vh] self-baseline w-fit;'
+                    id={'aboutMe'} className='dark:text-main main-font text-d-main text-black self-center text-4xl border-b-4 font-medium border-third dark:border-d-third p-1 ml-[5%] mt-[5vh] sm:mt-[10vh] mb-[5vh] self-baseline w-fit;'
                 >        
                     Skills
                 </m.h1>
@@ -64,7 +64,7 @@ export default function Skills() {
             <div className="flex flex-wrap gap-6 p-4 justify-around mb-15">
                 {skillsSection.map((item) => {
                     return(
-                            <m.div key={item.title} className="flex flex-col items-center justify-center aspect-square p-4 border border-gray-200 rounded-2xl shadow-2xl p-4 rounded-md border-b-4"
+                            <m.div key={item.title} className="flex flex-col bg-[#2e2e2e] items-center justify-center aspect-square p-4 border border-gray-200 rounded-2xl shadow-2xl p-4 rounded-md border-b-4"
                                 initial={{opacity: 0, y: '7vh'}}
                                 whileInView={{opacity: 1, y: 0, transition: {duration: 1}}}
                                 viewport={{once: true, amount: 'some', margin: '10%'}}
