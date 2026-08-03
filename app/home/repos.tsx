@@ -1,5 +1,6 @@
 import { m } from 'framer-motion';
 import Link from "next/link";
+import Image from 'next/image';
 
 type Projects = {
     name: string,
@@ -58,15 +59,20 @@ const otherProjects: Projects[] = [
 export default function Repos() {
     
     return (
-        <>
-            <m.h1                    
-                initial={{opacity: 0, y: '5vh'}}
-                whileInView={{opacity: 1, y: 0, transition: {duration: 1}}}
-                viewport={{once: true, amount: 'some', margin: '10%'}}
-                id={'aboutMe'} className='main-font dark:text-main text-d-main self-center text-4xl border-b-4 font-medium border-third dark:border-d-third p-1 ml-[5%] mt-[5vh] sm:mt-[10vh] mb-[5vh] self-baseline w-fit;'
-            >        
-                My Projects
-            </m.h1>
+        <div className='relative pb-[5%]'>
+            <div className="w-full h-full absolute z-[-100]">
+                <Image src="/tempBackground.png" fill loading="eager" alt="Loading..." className="aspect-16:9"/>
+            </div>
+            <div className='px-4 rounded-xl flex mx-auto min-h-15 w-[25%] items-center justify-center mt-[2.5%]'>
+                <m.h1                    
+                    initial={{opacity: 0, y: '5vh'}}
+                    whileInView={{opacity: 1, y: 0, transition: {duration: 1}}}
+                    viewport={{once: true, amount: 'some', margin: '10%'}}
+                    id={'aboutMe'} className='main-font dark:text-main text-d-main self-center text-4xl border-b-4 font-medium border-third dark:border-d-third p-1 ml-[5%] mt-[5vh] sm:mt-[10vh] mb-[5vh] self-baseline w-fit;'
+                >        
+                    My Projects
+                </m.h1>
+            </div>
             <div className='flex flex-wrap m-10 justify-around gap-y-10 gap-x-5'>
                 {otherProjects.map(project => {
                 return (
@@ -95,6 +101,6 @@ export default function Repos() {
                 )
                 })}
             </div>
-        </>
+        </div>
     )
 }
