@@ -22,11 +22,11 @@ export default function WhoAmI() {
             <div className='flex items-center flex-col'>
                 <div className='max-w-[1500px] mx-[5%] bg-about-me-background bg-[#9f9f9f] dark:bg-d-about-me-background flex flex-col md:flex-row items-center rounded-2xl p-4 shadow-xl'>
                     <m.div
-                        initial={{opacity: 0, x: '-10vh'}}
-                        whileInView={{opacity: 1, x: 0, transition: {duration: 1}}}
+                        initial={{opacity: 0, y: '10vh'}}
+                        whileInView={{opacity: 1, y: 0, transition: {duration: 1}}}
                         viewport={{once: true, amount: 'some'}}            
                     >
-                        <p className='main-font text-d-main font-medium text-sm md:text-2xl md:w-2/3 whitespace-pre-line md:mx-4'>
+                        <p className='main-font text-black text-d-main font-medium text-sm md:text-2xl md:w-2/3 whitespace-pre-line md:mx-4'>
                         {`I am studying Computer Science at the University of Arkansas!
 
                         I have lots of experience with Mobile Development, Web Dev, and Dev Ops.
