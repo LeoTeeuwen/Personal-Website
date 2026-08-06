@@ -39,7 +39,7 @@ export default function WhoAmI() {
                         viewport={{once: true, amount: 'some'}}
                         className='md:w-1/3 m-4'
                     >
-                        <Image width={4000} height={4000} priority src="/loadingScreen.png" alt="Image of self" className='h-max w-max rounded-xl' />
+                        <Image width={4000} height={4000} priority src="/aboutMeImage.jpg" alt="Image of self" className='h-max w-max rounded-xl' />
                     </m.div>
                 </div>
             </div>
