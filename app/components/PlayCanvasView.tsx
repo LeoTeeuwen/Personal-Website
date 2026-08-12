@@ -17,28 +17,51 @@ interface InputEvents {
 function Scene() {  
   
   const app = useApp();
+
+  const userInputObject: { [key: string]: boolean } = {"w": false, "a": false, "s": false, "d": false};
     
   const cube = useRef<PcEntity>(null);
   
   const onUpdate = (dt: number) => {
       cube.current?.rotate(10 * dt, 20 * dt, 30 * dt);
+
+      // Movement of the player
+      // TODO handle user strafing (w + d)
+      if (userInputObject["w"]) {
+        cube?.current?.translate(0, 0, -0.5)
+      }
+      if (userInputObject["s"]) {
+        cube?.current?.translate(0, 0, 0.5)
+      }
+      if(userInputObject["a"]) {
+        cube?.current?.translate(-0.5, 0, 0)
+      }
+      if(userInputObject["d"]) {
+        cube?.current?.translate(0.5, 0, 0)
+      }
+      if(userInputObject["Shift"]) {
+        cube?.current?.translate(0, -0.5, 0)
+      }
+      if(userInputObject[" "]) {
+        cube?.current?.translate(0, 0.5, 0)
+      }
+
+
     }
 
 
     // Rotate the cube according to the delta time since the last frame
     useAppEvent('update', (dt: number) => onUpdate(dt));
-
-    // app.keyboard.on(pc.EVENT_KEYDOWN, (key) => {console.log(key)});
     
     app.keyboard = new pc.Keyboard(window);
     app.keyboard.preventDefault = true;
 
     app.keyboard.on(pc.EVENT_KEYDOWN, (key => {
-      console.log("key: ", key)
+      userInputObject[`${key.event.key}`] = true;
     }));
     
     app.keyboard.on(pc.EVENT_KEYUP, (key => {
-      console.log("key: ", key)
+      userInputObject[`${key.event.key}`] = false;
     }));
 
     return (
