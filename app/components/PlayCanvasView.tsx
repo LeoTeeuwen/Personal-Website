@@ -1,14 +1,45 @@
+'use client';
+
 import { Application, Entity } from '@playcanvas/react';
 import { Camera, Light, Render } from '@playcanvas/react/components';
-import { useAppEvent } from '@playcanvas/react/hooks';
+import { useApp, useAppEvent } from '@playcanvas/react/hooks';
 import type { Entity as PcEntity } from 'playcanvas';
 import { useRef } from 'react';
+import * as pc from 'playcanvas';
 
-function Scene() {
-    const cube = useRef<PcEntity>(null);
+interface InputEvents {
+  keyDown: (key: string) => void
+  keyUp: (key: string) => void
+  mouseClick: (x: number, y: number) => void
+  mouseMove: (x: number, y: number) => void
+}
+
+function Scene() {  
+  
+  const app = useApp();
+    
+  const cube = useRef<PcEntity>(null);
+  
+  const onUpdate = (dt: number) => {
+      cube.current?.rotate(10 * dt, 20 * dt, 30 * dt);
+    }
+
 
     // Rotate the cube according to the delta time since the last frame
-    useAppEvent('update', (dt: number) => cube.current?.rotate(10 * dt, 20 * dt, 30 * dt));
+    useAppEvent('update', (dt: number) => onUpdate(dt));
+
+    // app.keyboard.on(pc.EVENT_KEYDOWN, (key) => {console.log(key)});
+    
+    app.keyboard = new pc.Keyboard(window);
+    app.keyboard.preventDefault = true;
+
+    app.keyboard.on(pc.EVENT_KEYDOWN, (key => {
+      console.log("key: ", key)
+    }));
+    
+    app.keyboard.on(pc.EVENT_KEYUP, (key => {
+      console.log("key: ", key)
+    }));
 
     return (
         <>
@@ -25,10 +56,17 @@ function Scene() {
     );
 }
 
+function SceneHandler() {
+  // console.log("keyboard: ", app.keyboard)
+  return (
+    <Scene />
+  )
+}
+
 export default function PlayCanvasView() {
     return (
         <Application>
-            <Scene />
+          <SceneHandler/>
         </Application>
     );
 }
