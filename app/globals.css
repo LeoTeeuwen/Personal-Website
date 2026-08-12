@@ -35,3 +35,12 @@ body {
     height: 25%;
     width: 10%;
 }
+
+/* TODO Figure out how to center the div parenting the canvas better than this because this is ridiculous */
+.game-canvas-div {
+  width: 85vw;
+  padding: auto;
+  margin: auto;
+  margin-top: 5%;
+  display: block;
+}
