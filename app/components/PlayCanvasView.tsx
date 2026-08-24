@@ -1,11 +1,12 @@
 'use client';
 
 import { Application, Entity } from '@playcanvas/react';
-import { Camera, Light, Render } from '@playcanvas/react/components';
+import { Camera, Light, Render, Script } from '@playcanvas/react/components';
 import { useApp, useAppEvent } from '@playcanvas/react/hooks';
 import type { Entity as PcEntity } from 'playcanvas';
 import { useRef } from 'react';
 import * as pc from 'playcanvas';
+import { CameraControls } from 'playcanvas/scripts/esm/camera-controls.mjs';
 
 interface InputEvents {
   keyDown: (key: string) => void
@@ -68,6 +69,7 @@ function Scene() {
         <>
             <Entity name="camera" position={[0, 0, 3]}>
                 <Camera clearColor="#8099e6" />
+                <Script script={CameraControls}/>
             </Entity>
             <Entity name="light" rotation={[45, 0, 0]}>
                 <Light type="directional" />
