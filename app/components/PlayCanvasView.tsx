@@ -6,6 +6,7 @@ import { useApp, useAppEvent, useMaterial } from '@playcanvas/react/hooks';
 import type { Entity as PcEntity } from 'playcanvas';
 import { useRef } from 'react';
 import * as pc from 'playcanvas';
+// @ts-ignore
 import { CameraControls } from 'playcanvas/scripts/esm/camera-controls.mjs';
 
 interface InputEvents {
