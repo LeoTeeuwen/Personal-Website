@@ -1,6 +1,5 @@
-'use client';
+import GameInstance from "../components/gameInstance";
 
-import PlayCanvasView from "../components/PlayCanvasView";
 
 export default function Home() {
     return (
@@ -9,7 +8,7 @@ export default function Home() {
             <link rel="icon" type="image/png" href="/icon.png"/>
             <div className="max-w-full max-h-full">
                 <div className="game-canvas-div">
-                    <PlayCanvasView />
+                    <GameInstance />
                 </div>
             </div>
         </>
